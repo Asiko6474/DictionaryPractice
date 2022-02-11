@@ -1,0 +1,12 @@
+
+.vs/DictionaryPractice/v16/
+
+Debug/
+
+*.sln
+
+*.vcxproj
+
+DictionaryPractice/DictionaryPractice.vcxproj.filters
+
+DictionaryPractice/DictionaryPractice.vcxproj.user
