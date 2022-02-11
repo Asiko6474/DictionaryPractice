@@ -1,12 +1,7 @@
 #pragma once
 
-template<typename TKey, typename TValue>
-struct Item
-{
-public:
-	TKey itemKey;
-	TValue itemValue;
-};
+
+
 
 template<typename TKey, typename TValue>
 class Dictionary
@@ -45,7 +40,13 @@ public:
 	const int operator = (const Dictionary<TKey, TValue> other);
 
 private:
-	Item<TKey, TValue>* m_items = nullptr;
+	struct Item
+	{
+		TKey itemKey;
+		TValue itemValue;
+	};
+
+	Item* m_items = nullptr;
 	int m_count = 0;
 
 };
