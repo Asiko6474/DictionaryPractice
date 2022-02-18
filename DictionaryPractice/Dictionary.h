@@ -72,7 +72,7 @@ inline const bool Dictionary<TKey, TValue>::containsValue(const TValue object)
 	{
 		//check if the value of item is equal to object
 		if (m_items[i].itemValue == object)
-			return true;//return true
+			return true;
 	}
 	return false;
 }
@@ -84,7 +84,7 @@ inline const bool Dictionary<TKey, TValue>::tryGetValue(const TKey key, const TV
 	{
 		//compares the key and the values
 		if (m_items[i].itemKey == key && m_items[i].itemValue == value)
-			return true; // returns true
+			return true;
 	}
 	return false;
 }
@@ -94,11 +94,11 @@ inline void Dictionary<TKey, TValue>::addItem(const TKey& key, const TValue& val
 {
 	//Make new item array that is 1 more
 	Item* newArrayItem = new Item[m_count + 1];
-	//for loop to copy the values in the old to the new
+
 
 	for (int i = 0; i < getCount(); i++)
 	{
-		//set the new array at teh index of i to the m_items at the index of i
+		//set the new array at the index of i to the m_items at the index of i
 		newArrayItem[i] = m_items[i];
 
 	}
@@ -113,7 +113,7 @@ inline void Dictionary<TKey, TValue>::addItem(const TKey& key, const TValue& val
 	//then make m_ites equal to the new array
 	m_items = newArrayItem;
 
-	//makes the items print
+	//prints out the items
 	std::cout << " " << m_items->itemValue;
 }
 
